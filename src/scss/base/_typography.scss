@@ -4,7 +4,6 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 20px;
 }
 
 
@@ -13,22 +12,33 @@ body {
     text-transform: uppercase;
     text-align: center;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     &--main {
         display: block;
-        font-size: 60px;
+        font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 35px;
+        letter-spacing: 3.5rem;
         animation: moveInLeft 1500ms ease;
+
+        @include respond(small) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    
     }
     
     &--sub {
         display: block;
         font-size: 20px;
         font-weight: 700;
-        letter-spacing: 17.4px;
+        letter-spacing: 1.74rem;
         animation: moveInRight 1500ms ease-out;
+
+        @include respond(small) {
+            letter-spacing: 0.5rem;
+        }
+
     }
 
 }
@@ -43,6 +53,14 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all 200ms;
+
+    @include respond(medium) {
+        font-size: 3rem;
+    }
+
+    @include respond(small) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         transform: skewY(-2deg) skewX(15deg) scale(1.1);

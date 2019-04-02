@@ -12,3 +12,58 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Media Query Manager
+
+/*
+0 - 600px       Phone
+600 - 900px     Tablet portrait
+900 - 1200px    Tablet landscape
+[1200 - 1800]   [where our normal (beginning) styles apply]
+1800px +        Big Desktop
+
+$breakpoint argument choices:
+- small
+- medium
+- large
+- x-large
+
+1em = 16px
+
+
+Order for refactorting:
+
+1. Base + Typography
+2. General Layout + Grid
+3. Page Layout
+4. Components
+
+*/
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == small {
+        
+        @media (max-width: 37.5em) { @content };     // 600px
+    
+    }
+
+    @if $breakpoint == medium {
+        
+        @media (max-width: 56.25em) { @content };     // 900px
+    
+    }
+
+    @if $breakpoint == large {
+        
+        @media (max-width: 75em) { @content };     // 1200px
+    
+    }
+
+    @if $breakpoint == x-large {
+        
+        @media (min-width: 112.5em) { @content };     // 1800px
+    
+    }
+    
+}
