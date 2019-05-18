@@ -85,3 +85,8 @@ All images are to be placed in the `src/images` directory.
 ## Final notes
 
 This SST is here to help make your life better! Use it and have fun! If you love this SST and want to improve your development and production processes, consider getting the complete version by buying [Automate Your Workflow](https://automateyourworkflow.com)!
+
+## Need to do:
+- Cross-browser testing (particularly menu)
+- Add responsive styles to modal
+- Implement build process for `/dist` for production
