@@ -44,25 +44,25 @@ Order for refactorting:
 
     @if $breakpoint == small {
         
-        @media (max-width: 37.5em) { @content };     // 600px
+        @media only screen and (max-width: 37.5em) { @content };     // 600px
     
     }
 
     @if $breakpoint == medium {
         
-        @media (max-width: 56.25em) { @content };     // 900px
+        @media only screen and (max-width: 56.25em) { @content };     // 900px
     
     }
 
     @if $breakpoint == large {
         
-        @media (max-width: 75em) { @content };     // 1200px
+        @media only screen and (max-width: 75em) { @content };     // 1200px
     
     }
 
     @if $breakpoint == x-large {
         
-        @media (min-width: 112.5em) { @content };     // 1800px
+        @media only screen and (min-width: 112.5em) { @content };     // 1800px
     
     }
     
